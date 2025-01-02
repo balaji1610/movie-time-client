@@ -9,6 +9,10 @@ const ApplicationProvider = ({ children }) => {
     username: "",
     password: "",
   });
+  const [newUserCrendential, setnewUserCrendential] = useState({
+    username: "",
+    password: "",
+  });
   const [isLoading, setIsLoading] = useState(false);
 
   return (
@@ -18,6 +22,8 @@ const ApplicationProvider = ({ children }) => {
         setCrendential,
         isLoading,
         setIsLoading,
+        newUserCrendential,
+        setnewUserCrendential,
       }}
     >
       {children}
