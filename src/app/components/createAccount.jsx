@@ -19,8 +19,8 @@ import * as Yup from "yup";
 import { FormHelperText } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 
-import { useApplicationContext } from "@/app/context/applicationContext";
-import userservice from "@/app/userService/userservice";
+import { useApplicationContext } from "@/app/context/ApplicationContext";
+import userservice from "@/app/userService/Userservice";
 
 export default function CreateAccount() {
   const router = useRouter();

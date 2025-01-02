@@ -1,4 +1,4 @@
-import MovieList from "@/app/components/movieList";
+import MovieList from "@/app/components/MovieList";
 export default function Movies() {
   return (
     <>

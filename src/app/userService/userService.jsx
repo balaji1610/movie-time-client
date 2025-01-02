@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
 
-import { useApplicationContext } from "@/app/context/applicationContext";
+import { useApplicationContext } from "@/app/context/ApplicationContext";
 
 import {
   loginRequest,
