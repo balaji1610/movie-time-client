@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Login from "@/app/components/Login";
+import dynamic from "next/dynamic";
+
+const Login = dynamic(() => import("@/app/components/Login"));
 
 export default function Home() {
   return (
