@@ -20,7 +20,7 @@ import * as Yup from "yup";
 import { FormHelperText } from "@mui/material";
 
 import { useApplicationContext } from "@/app/context/applicationContext";
-import userservice from "@/app/userService/userService";
+import userservice from "@/app/userService/userservice";
 
 export default function Login() {
   const router = useRouter();

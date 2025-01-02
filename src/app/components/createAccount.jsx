@@ -20,7 +20,7 @@ import { FormHelperText } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 
 import { useApplicationContext } from "@/app/context/applicationContext";
-import userservice from "@/app/userservice/userservice";
+import userservice from "@/app/userService/userservice";
 
 export default function CreateAccount() {
   const router = useRouter();
