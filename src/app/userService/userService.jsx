@@ -4,9 +4,14 @@ import { useRouter } from "next/navigation";
 
 import { useApplicationContext } from "@/app/context/applicationContext";
 
-import { loginRequest, createAccountRequest } from "../../../services/services";
+import {
+  loginRequest,
+  createAccountRequest,
+  protectedRequest,
+} from "../../../services/services";
 
 export default function UserService() {
+  const router = useRouter();
   const { crendential, setIsLoading, newUserCrendential } =
     useApplicationContext();
 
@@ -17,6 +22,7 @@ export default function UserService() {
       if (response.status == 200) {
         toast.success(response.data.message);
         setIsLoading(false);
+        router.push("./movies");
         return response.data;
       } else {
         toast.error(response.data.message);
@@ -44,8 +50,19 @@ export default function UserService() {
       toast.error("Something Went Wrong");
     }
   };
+  const protectedRoute = async () => {
+    try {
+      const response = await protectedRequest();
+      debugger;
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return {
     login,
     createAccount,
+    protectedRoute,
   };
 }

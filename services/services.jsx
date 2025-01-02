@@ -14,3 +14,10 @@ export const createAccountRequest = async (newUser) => {
   );
   return response;
 };
+
+export const protectedRequest = async () => {
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_PROTECTED_ENDPOINT}`
+  );
+  return response;
+};
